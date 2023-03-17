@@ -1,11 +1,4 @@
 #!/bin/bash
 
-# Get the C file name from the environment variable
-CFILE=$1
-
-# Generate the output file name
-OFILE=${CFILE%.c}.o
-
-# Compile the C file without linking
-gcc -c $CFILE -o $OFILE
+gcc $CFILE -c
 

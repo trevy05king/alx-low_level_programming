@@ -1,6 +1,5 @@
+#include<stdio.h>
 #include <unistd.h>
-#define STDERR 2
-
 /**
  * main - Entry point
  *
@@ -8,15 +7,6 @@
  */
 int main(void)
 {
-    const char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-    ssize_t len = 0;
-
-    while (str[len])
-        len++;
-
-    if (write(STDERR, str, len) != len)
-        return (1);
-
-    return (1);
+	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	return (1);
 }
-

@@ -1,9 +1,2 @@
 #!/bin/bash
-# Get the name of the C file from the command-line argument
-CFILE="$1"
-# Generate the assembly code using gcc with the -S option
-gcc -S -masm=intel "$CFILE"
-# Get the base name of the C file (without the extension)
-BASENAME="${CFILE%.*}"
-# Rename the output file with the .s extension
-mv "$BASENAME.s" "$BASENAME.s"
+gcc -S -masm=intel $CFILE
